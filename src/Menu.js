@@ -1,20 +1,19 @@
 const Menu = ({items})=>{
-    return <div className="section-center">
-        {items.map((menuItem)=>{
-            const{id,title,category,price,img,desc} = menuItem
-
-            return <article className="menu-item">
+    return <div className = "section-center">
+        {items.map((item)=>{
+            const {id,title,category,price,img,desc} = item
+            return <article key ={id} className="menu-item">
                 <img src={img} alt={title} className="photo"/>
                 <div className="item-info">
                     <header>
-                        <h3>{title}</h3>
-                        <h4 className="price">{`$${price}`}</h4>
+                        <h4>{title}</h4>
+                        <h4 className="price">${price}`</h4>
+
                     </header>
                     <p className="item-text">{desc.substring(0,80)}</p>
                 </div>
             </article>
         })}
-
     </div>
 }
 

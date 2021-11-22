@@ -10,6 +10,7 @@ const Menu = ({items})=>{
                         <h3>{title}</h3>
                         <h4 className="price">{`$${price}`}</h4>
                     </header>
+                    <p className="item-text">{desc.substring(0,80)}</p>
                 </div>
             </article>
         })}
